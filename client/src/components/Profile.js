@@ -7,7 +7,7 @@ function Profile({ token }) {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/auth/profile', {
+        const res = await fetch('https://secure-user-authentication-yv6y.onrender.com/api/auth/profile', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`
