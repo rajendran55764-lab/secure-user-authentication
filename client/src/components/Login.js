@@ -14,7 +14,7 @@ function Login({ setToken, setPage }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/auth/login', {
+      const res = await fetch('https://secure-user-authentication-yv6y.onrender.com/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
