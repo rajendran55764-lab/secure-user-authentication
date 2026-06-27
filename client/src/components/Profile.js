@@ -27,16 +27,30 @@ function Profile({ token }) {
   }, [token]);
 
   return (
-    <div className="card">
-      <h2>👤 Profile</h2>
-      {error && <p className="error">{error}</p>}
+    <div className="card profile-card">
+      <div className="card-header">
+        <div style={{fontSize:'60px', textAlign:'center'}}>👤</div>
+        <h2>My Profile</h2>
+        <p className="subtitle">Your account information</p>
+      </div>
+      {error && <p className="error">⚠️ {error}</p>}
       {user && (
-        <div className="profile-info">
-          <p><strong>👤 Username:</strong> {user.username}</p>
-          <p><strong>📧 Email:</strong> {user.email}</p>
-          <p><strong>🔑 Role:</strong> {user.role}</p>
-          <p><strong>📅 Joined:</strong> {new Date(user.createdAt).toLocaleDateString()}</p>
-        </div>
+        <>
+          <div className="profile-avatar">
+            <span>
+              {user.username ? user.username[0].toUpperCase() : '?'}
+            </span>
+          </div>
+          <div className="profile-info">
+            <p>👤 <strong>Username:</strong> {user.username}</p>
+            <p>📧 <strong>Email:</strong> {user.email}</p>
+            <p>🔑 <strong>Role:</strong> {user.role}</p>
+            <p>📅 <strong>Joined:</strong> {new Date(user.createdAt).toLocaleDateString()}</p>
+          </div>
+          <div className="security-badge" style={{marginTop:'20px'}}>
+            ✅ Account Verified & Secure
+          </div>
+        </>
       )}
     </div>
   );
