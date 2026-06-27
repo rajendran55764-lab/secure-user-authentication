@@ -34,38 +34,42 @@ function Login({ setToken, setPage }) {
 
   return (
     <div className="card">
-      <h2>🔐 Login</h2>
-      {error && <p className="error">{error}</p>}
+      <div className="card-header">
+        <div style={{fontSize:'60px', textAlign:'center'}}>🔐</div>
+        <h2>Welcome Back!</h2>
+        <p className="subtitle">Login to your secure account</p>
+      </div>
+      {error && <p className="error">⚠️ {error}</p>}
       <div className="form-group">
-        <label>Email</label>
+        <label>📧 Email Address</label>
         <input
           type="email"
           name="email"
-          placeholder="Enter email"
+          placeholder="Enter your email"
           onChange={handleChange}
         />
       </div>
       <div className="form-group">
-        <label>Password</label>
+        <label>🔒 Password</label>
         <input
           type="password"
           name="password"
-          placeholder="Enter password"
+          placeholder="Enter your password"
           onChange={handleChange}
         />
       </div>
       <button className="btn" onClick={handleSubmit}>
-        Login
+        🚀 Login Now
       </button>
-      <p style={{textAlign:'center', marginTop:'10px'}}>
+      <div className="link-text">
         Don't have account?{' '}
-        <span
-          style={{color:'blue', cursor:'pointer'}}
-          onClick={() => setPage('register')}
-        >
-          Register
+        <span onClick={() => setPage('register')}>
+          Register Here
         </span>
-      </p>
+      </div>
+      <div className="security-badge">
+        🔒 Secured with JWT Authentication
+      </div>
     </div>
   );
 }
