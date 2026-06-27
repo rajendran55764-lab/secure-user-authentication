@@ -63,3 +63,18 @@ secure-user-authentication/
 
 ## 👨‍💻 Author
 rajendran55764-lab - Prodigy Infotech Internship Task 01
+
+## 🌐 Live Demo
+
+### Frontend (Website)
+[Click Here to Open Website](https://secure-user-authentication-sooty.vercel.app)
+
+### Backend (API)
+[Click Here to Open API](https://secure-user-authentication-yv6y.onrender.com)
+
+## 📱 Screenshots
+- Login Page
+- Register Page  
+- Dashboard
+- Admin Panel
+- Profile Page
