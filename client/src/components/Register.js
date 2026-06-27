@@ -23,7 +23,7 @@ function Register({ setPage }) {
       });
       const data = await res.json();
       if (res.ok) {
-        setSuccess('Registered successfully! Please login.');
+        setSuccess('✅ Registered successfully! Redirecting to login...');
         setTimeout(() => setPage('login'), 2000);
       } else {
         setError(data.msg);
@@ -35,48 +35,52 @@ function Register({ setPage }) {
 
   return (
     <div className="card">
-      <h2>📝 Register</h2>
-      {error && <p className="error">{error}</p>}
+      <div className="card-header">
+        <div style={{fontSize:'60px', textAlign:'center'}}>📝</div>
+        <h2>Create Account</h2>
+        <p className="subtitle">Join us today for free!</p>
+      </div>
+      {error && <p className="error">⚠️ {error}</p>}
       {success && <p className="success">{success}</p>}
       <div className="form-group">
-        <label>Username</label>
+        <label>👤 Username</label>
         <input
           type="text"
           name="username"
-          placeholder="Enter username"
+          placeholder="Enter your username"
           onChange={handleChange}
         />
       </div>
       <div className="form-group">
-        <label>Email</label>
+        <label>📧 Email Address</label>
         <input
           type="email"
           name="email"
-          placeholder="Enter email"
+          placeholder="Enter your email"
           onChange={handleChange}
         />
       </div>
       <div className="form-group">
-        <label>Password</label>
+        <label>🔒 Password</label>
         <input
           type="password"
           name="password"
-          placeholder="Enter password"
+          placeholder="Create a password"
           onChange={handleChange}
         />
       </div>
       <button className="btn" onClick={handleSubmit}>
-        Register
+        🎉 Create Account
       </button>
-      <p style={{textAlign:'center', marginTop:'10px'}}>
+      <div className="link-text">
         Already have account?{' '}
-        <span
-          style={{color:'blue', cursor:'pointer'}}
-          onClick={() => setPage('login')}
-        >
-          Login
+        <span onClick={() => setPage('login')}>
+          Login Here
         </span>
-      </p>
+      </div>
+      <div className="security-badge">
+        🔒 Your data is safe and encrypted
+      </div>
     </div>
   );
 }
