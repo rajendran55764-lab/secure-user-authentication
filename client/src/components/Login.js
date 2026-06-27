@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Login({ setToken, setPage }) {
+function Login({ setToken, setPage, handleLogin }) {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -21,9 +21,9 @@ function Login({ setToken, setPage }) {
       });
       const data = await res.json();
       if (res.ok) {
-        localStorage.setItem('token', data.token);
-        setToken(data.token);
-        setPage('profile');
+        // Decode token to get role
+        const payload = JSON.parse(atob(data.token.split('.')[1]));
+        handleLogin(data.token, payload.role);
       } else {
         setError(data.msg);
       }
