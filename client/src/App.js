@@ -21,13 +21,21 @@ function App() {
         <div>
           {!token ? (
             <>
-              <button onClick={() => setPage('login')}>Login</button>
-              <button onClick={() => setPage('register')}>Register</button>
+              <button onClick={() => setPage('login')}>
+                🔑 Login
+              </button>
+              <button onClick={() => setPage('register')}>
+                📝 Register
+              </button>
             </>
           ) : (
             <>
-              <button onClick={() => setPage('profile')}>Profile</button>
-              <button onClick={logout}>Logout</button>
+              <button onClick={() => setPage('profile')}>
+                👤 Profile
+              </button>
+              <button onClick={logout}>
+                🚪 Logout
+              </button>
             </>
           )}
         </div>
