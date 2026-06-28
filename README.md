@@ -1,11 +1,11 @@
-# 🔐 Secure User Authentication System
+#  Secure User Authentication System
 
-## 📌 Prodigy Infotech Internship - Task 01
+##  Prodigy Infotech Internship - Task 01
 
-## 🔍 Project Overview
+##  Project Overview
 A secure user authentication system built with React.js frontend and Node.js backend with MongoDB database.
 
-## 🛠️ Technologies Used
+##  Technologies Used
 ### Frontend
 - React.js
 - CSS3
@@ -19,7 +19,7 @@ A secure user authentication system built with React.js frontend and Node.js bac
 - dotenv
 - cors
 
-## 📁 Project Structure
+##  Project Structure
 secure-user-authentication/
 ├── client/
 │   ├── public/
@@ -43,7 +43,7 @@ secure-user-authentication/
     ├── server.js
     └── package.json
 
-## 🚀 API Endpoints
+##  API Endpoints
 | Method | Endpoint | Description | Access |
 |--------|----------|-------------|--------|
 | POST | /api/auth/register | Register new user | Public |
@@ -51,20 +51,20 @@ secure-user-authentication/
 | GET | /api/auth/profile | Get user profile | Protected |
 | GET | /api/auth/admin | Admin dashboard | Admin Only |
 
-## ⚙️ Features
-- ✅ User Registration
-- ✅ Secure Login
-- ✅ Password Hashing with bcryptjs
-- ✅ JWT Token Authentication
-- ✅ Protected Routes
-- ✅ Role Based Access Control
-- ✅ React Frontend
-- ✅ REST API Backend
+##  Features
+-  User Registration
+-  Secure Login
+-  Password Hashing with bcryptjs
+-  JWT Token Authentication
+-  Protected Routes
+-  Role Based Access Control
+-  React Frontend
+-  REST API Backend
 
-## 👨‍💻 Author
+##  Author
 rajendran55764-lab - Prodigy Infotech Internship Task 01
 
-## 🌐 Live Demo
+##  Live Demo
 
 ### Frontend (Website)
 [Click Here to Open Website](https://secure-user-authentication-sooty.vercel.app)
@@ -72,7 +72,7 @@ rajendran55764-lab - Prodigy Infotech Internship Task 01
 ### Backend (API)
 [Click Here to Open API](https://secure-user-authentication-yv6y.onrender.com)
 
-## 📱 Screenshots
+##  Screenshots
 - Login Page
 - Register Page  
 - Dashboard
